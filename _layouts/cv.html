@@ -1,3 +1,7 @@
+{%- if page.redirect_to -%}
+  <meta http-equiv="Refresh" content="0; url={{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" />
+{%- else -%}
+
 ---
 layout: default
 ---
@@ -116,3 +120,5 @@ layout: default
 
 </div>
 {% endunless %}
+
+{%- endif -%}
